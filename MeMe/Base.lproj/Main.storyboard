@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fgd-cD-vgq"/>
@@ -60,7 +60,8 @@
                         <constraints>
                             <constraint firstItem="Fgd-cD-vgq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2lM-5R-Fq5"/>
                             <constraint firstItem="6vr-dj-FHq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Il-C2-RXl"/>
-                            <constraint firstItem="bvz-RK-n7E" firstAttribute="top" secondItem="kJU-4z-pyy" secondAttribute="bottom" constant="75" id="8U3-wU-A7W"/>
+                            <constraint firstItem="l6Z-tc-vYR" firstAttribute="top" secondItem="6vr-dj-FHq" secondAttribute="bottom" constant="20" id="71I-7v-Snw"/>
+                            <constraint firstItem="bvz-RK-n7E" firstAttribute="top" secondItem="kJU-4z-pyy" secondAttribute="bottom" constant="20" id="998-vr-d4A"/>
                             <constraint firstItem="Fgd-cD-vgq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9tA-Tz-thS"/>
                             <constraint firstItem="bvz-RK-n7E" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="AgT-s1-D7a"/>
                             <constraint firstItem="kJU-4z-pyy" firstAttribute="trailing" secondItem="bvz-RK-n7E" secondAttribute="trailing" id="FO4-fX-Jfo"/>
@@ -68,8 +69,9 @@
                             <constraint firstItem="kJU-4z-pyy" firstAttribute="leading" secondItem="bvz-RK-n7E" secondAttribute="leading" id="NT7-QJ-S57"/>
                             <constraint firstItem="6vr-dj-FHq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="OBg-7w-4kW"/>
                             <constraint firstItem="bvz-RK-n7E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RG9-5u-yNK"/>
+                            <constraint firstItem="l6Z-tc-vYR" firstAttribute="top" secondItem="6vr-dj-FHq" secondAttribute="bottom" constant="75" id="Svg-AV-jF3"/>
+                            <constraint firstItem="bvz-RK-n7E" firstAttribute="top" secondItem="kJU-4z-pyy" secondAttribute="bottom" constant="75" id="Uor-OU-6wl"/>
                             <constraint firstItem="l6Z-tc-vYR" firstAttribute="leading" secondItem="6vr-dj-FHq" secondAttribute="leading" id="X6M-qp-CWa"/>
-                            <constraint firstItem="l6Z-tc-vYR" firstAttribute="top" secondItem="6vr-dj-FHq" secondAttribute="bottom" constant="75" id="Z7S-Pm-PPO"/>
                             <constraint firstAttribute="trailing" secondItem="bvz-RK-n7E" secondAttribute="trailing" id="bsl-Io-8wW"/>
                             <constraint firstAttribute="trailing" secondItem="Fgd-cD-vgq" secondAttribute="trailing" id="fDO-Ik-uZq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bvz-RK-n7E" secondAttribute="bottom" id="lyX-09-kG2"/>
@@ -79,15 +81,23 @@
                             <constraint firstItem="Fgd-cD-vgq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zR4-My-3om"/>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="kJU-4z-pyy"/>
-                                <exclude reference="l6Z-tc-vYR"/>
+                            <mask key="constraints">
+                                <exclude reference="71I-7v-Snw"/>
+                                <exclude reference="Svg-AV-jF3"/>
+                                <exclude reference="998-vr-d4A"/>
+                                <exclude reference="Uor-OU-6wl"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="71I-7v-Snw"/>
+                                <include reference="998-vr-d4A"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
-                            <mask key="subviews">
-                                <include reference="kJU-4z-pyy"/>
-                                <include reference="l6Z-tc-vYR"/>
+                            <mask key="constraints">
+                                <include reference="Svg-AV-jF3"/>
+                                <include reference="Uor-OU-6wl"/>
                             </mask>
                         </variation>
                     </view>
