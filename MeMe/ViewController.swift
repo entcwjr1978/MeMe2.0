@@ -44,6 +44,10 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         shareBar.isEnabled = false
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     func userDidTapShare() {
         //Implementation goes here ...
         let meme = generateMemedImage()

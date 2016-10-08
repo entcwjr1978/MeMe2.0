@@ -15,15 +15,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fgd-cD-vgq"/>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vr-dj-FHq">
-                                <items>
-                                    <navigationItem id="snE-Ta-PgA"/>
-                                </items>
-                            </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvz-RK-n7E">
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="BnN-5o-3ks"/>
@@ -55,6 +50,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vr-dj-FHq">
+                                <items>
+                                    <navigationItem id="snE-Ta-PgA"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -62,9 +62,9 @@
                             <constraint firstItem="6vr-dj-FHq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Il-C2-RXl"/>
                             <constraint firstItem="l6Z-tc-vYR" firstAttribute="top" secondItem="6vr-dj-FHq" secondAttribute="bottom" constant="20" id="71I-7v-Snw"/>
                             <constraint firstItem="bvz-RK-n7E" firstAttribute="top" secondItem="kJU-4z-pyy" secondAttribute="bottom" constant="20" id="998-vr-d4A"/>
-                            <constraint firstItem="Fgd-cD-vgq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9tA-Tz-thS"/>
                             <constraint firstItem="bvz-RK-n7E" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="AgT-s1-D7a"/>
                             <constraint firstItem="kJU-4z-pyy" firstAttribute="trailing" secondItem="bvz-RK-n7E" secondAttribute="trailing" id="FO4-fX-Jfo"/>
+                            <constraint firstItem="Fgd-cD-vgq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GYS-uP-8bD"/>
                             <constraint firstAttribute="trailing" secondItem="6vr-dj-FHq" secondAttribute="trailing" id="MAD-UF-7ND"/>
                             <constraint firstItem="kJU-4z-pyy" firstAttribute="leading" secondItem="bvz-RK-n7E" secondAttribute="leading" id="NT7-QJ-S57"/>
                             <constraint firstItem="6vr-dj-FHq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="OBg-7w-4kW"/>
@@ -72,12 +72,12 @@
                             <constraint firstItem="l6Z-tc-vYR" firstAttribute="top" secondItem="6vr-dj-FHq" secondAttribute="bottom" constant="75" id="Svg-AV-jF3"/>
                             <constraint firstItem="bvz-RK-n7E" firstAttribute="top" secondItem="kJU-4z-pyy" secondAttribute="bottom" constant="75" id="Uor-OU-6wl"/>
                             <constraint firstItem="l6Z-tc-vYR" firstAttribute="leading" secondItem="6vr-dj-FHq" secondAttribute="leading" id="X6M-qp-CWa"/>
+                            <constraint firstItem="6vr-dj-FHq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bFk-bX-M8V"/>
                             <constraint firstAttribute="trailing" secondItem="bvz-RK-n7E" secondAttribute="trailing" id="bsl-Io-8wW"/>
                             <constraint firstAttribute="trailing" secondItem="Fgd-cD-vgq" secondAttribute="trailing" id="fDO-Ik-uZq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bvz-RK-n7E" secondAttribute="bottom" id="lyX-09-kG2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fgd-cD-vgq" secondAttribute="bottom" constant="44" id="mWx-W6-VQd"/>
                             <constraint firstItem="l6Z-tc-vYR" firstAttribute="trailing" secondItem="6vr-dj-FHq" secondAttribute="trailing" id="nma-Zb-FnL"/>
-                            <constraint firstItem="6vr-dj-FHq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uvo-hs-UUu"/>
                             <constraint firstItem="Fgd-cD-vgq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zR4-My-3om"/>
                         </constraints>
                         <variation key="default">
@@ -113,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375.19999999999999" y="500.59970014992507"/>
+            <point key="canvasLocation" x="-375.36231884057975" y="500.54347826086962"/>
         </scene>
     </scenes>
 </document>
