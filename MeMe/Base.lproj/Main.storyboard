@@ -159,6 +159,52 @@
             </objects>
             <point key="canvasLocation" x="-2143" y="703"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tqM-2E-s95">
+            <objects>
+                <navigationController id="1KD-Ei-BNJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nlJ-l0-fEN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nU1-oW-QVg" kind="relationship" relationship="rootViewController" id="nQg-OG-Q6c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgv-cq-Nqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2143" y="1519"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TCU-qe-a7o">
+            <objects>
+                <viewController id="nU1-oW-QVg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fTu-FF-klT"/>
+                        <viewControllerLayoutGuide type="bottom" id="kSa-rb-xeW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GqL-QM-F5W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PMZ-t3-XjI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PMZ-t3-XjI" firstAttribute="centerY" secondItem="GqL-QM-F5W" secondAttribute="centerY" id="9iu-2U-bpd"/>
+                            <constraint firstItem="PMZ-t3-XjI" firstAttribute="centerX" secondItem="GqL-QM-F5W" secondAttribute="centerX" id="HfB-mY-bbC"/>
+                            <constraint firstItem="PMZ-t3-XjI" firstAttribute="height" secondItem="GqL-QM-F5W" secondAttribute="height" id="mwa-a3-eNk"/>
+                            <constraint firstItem="PMZ-t3-XjI" firstAttribute="width" secondItem="GqL-QM-F5W" secondAttribute="width" id="pg9-pf-abY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GoY-GH-bpR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7jB-sd-pGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1191.2" y="1518.8905547226389"/>
+        </scene>
         <!--Sent Memes Collection View Controller-->
         <scene sceneID="g0i-PR-Kbc">
             <objects>
