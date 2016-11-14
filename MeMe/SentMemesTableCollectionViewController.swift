@@ -6,4 +6,10 @@
 //  Copyright © 2016 Edward Williams. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class SentMemesTableViewController:UITableViewController {
+    var memes: [Meme] {
+        return (UIApplication.shared.delegate as! AppDelegate).memes
+    }
+}

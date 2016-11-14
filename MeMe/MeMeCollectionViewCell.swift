@@ -6,4 +6,10 @@
 //  Copyright © 2016 Edward Williams. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MeMeCollectionViewCell:UICollectionViewCell {
+    
+    @IBOutlet weak var memeImageView:UIImageView!
+    
+}
