@@ -11,13 +11,14 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UITextFieldDelegate {
 
-    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var albumButton: UIBarButtonItem!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
+    @IBOutlet weak var shareBar:UIBarButtonItem!
+    @IBOutlet weak var cancelBar:UIBarButtonItem!
     
     let memeTextAttributes = [
         NSStrokeColorAttributeName : UIColor.black,
@@ -26,9 +27,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         NSStrokeWidthAttributeName : -3.0
     ] as [String : Any]
     
-    let shareBar: UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.action, target: self, action: #selector(ViewController.userDidTapShare))
     
-    let cancelBar: UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.cancel, target: self, action: #selector(ViewController.cancel))
     
     var height : CGFloat!
     
@@ -39,29 +38,11 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         bottomTextField.defaultTextAttributes = memeTextAttributes
         topTextField.textAlignment = NSTextAlignment.center
         bottomTextField.textAlignment = NSTextAlignment.center
-        self.navigationBar.topItem?.rightBarButtonItem = cancelBar
-        self.navigationBar.topItem?.leftBarButtonItem = shareBar
-        shareBar.isEnabled = false
+        navigationItem.leftBarButtonItem?.isEnabled = false
     }
     
     override var prefersStatusBarHidden: Bool {
         return true
-    }
-    
-    func userDidTapShare() {
-        //Implementation goes here ...
-        let meme = generateMemedImage()
-        let objectsToShare = [meme]
-        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-        activityVC.popoverPresentationController?.barButtonItem = shareBar
-        self.present(activityVC, animated: true, completion: nil)
-    }
-    
-    func cancel() {
-        imagePickerView.image = nil
-        topTextField.text = "TOP"
-        bottomTextField.text = "BOTTOM"
-        shareBar.isEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -139,6 +120,24 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func cancel (sender: AnyObject) {
+        imagePickerView.image = nil
+        topTextField.text = "TOP"
+        bottomTextField.text = "BOTTOM"
+        shareBar.isEnabled = false
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func share (sender: AnyObject) {
+        //Implementation goes here ...
+        let meme = generateMemedImage()
+        let objectsToShare = [meme]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityVC.popoverPresentationController?.barButtonItem = shareBar
+        self.present(activityVC, animated: true, completion: nil)
+
+    }
+    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if (textField == bottomTextField) {
             self.subscribeToKeyboardNotifications()
@@ -162,7 +161,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     }
     
     func generateMemedImage() -> UIImage {
-        navigationBar.isHidden = true
+        self.navigationController?.isNavigationBarHidden = true
         toolBar.isHidden = true
         
         // Render view to an image
@@ -173,7 +172,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
             UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        navigationBar.isHidden = false
+        self.navigationController?.isNavigationBarHidden = false
         toolBar.isHidden = false
         return memedImage
     }
